@@ -74,4 +74,11 @@ footer ul{
 
 footer i{
     color: white;
+    font-size: 24px;
+}
+
+footer i:hover{
+    transform: scale(2);
+    transition: transform 0.25s;
+    padding-bottom:30px;
 }
