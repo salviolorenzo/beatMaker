@@ -6,7 +6,7 @@ html, body{
 }
 
 *{
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     font-family: 'Baloo Bhaijaan', cursive;
 }
 
@@ -48,6 +48,14 @@ header, footer{
     background-color: rgb(161, 161, 161);
     width: 22%;
     height:18%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.soundButton:active{
+    transform: scale(1.1);
+    transition: transform 0.1s;
 }
 
 footer{
