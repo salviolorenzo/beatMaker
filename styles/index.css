@@ -53,6 +53,11 @@ header, footer{
     justify-content: center;
 }
 
+.soundButton p{
+    max-width: 100%;
+    max-height: 20%;
+}
+
 .soundButton:active{
     transform: scale(1.1);
     transition: transform 0.1s;
