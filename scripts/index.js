@@ -40,23 +40,27 @@ const soundArray = [fx1, fx2, fx3, fx4, hat1, hat2, hat3, hat4, snare1, snare2, 
 
 
 function addClicks() {
-    for (let index = 0; index < buttonArray.length; index++) {
-        buttonArray[index].addEventListener('click', function () {
-            soundArray[index].play();
-            console.log(`clicked`);
-        });
-    }
+  for (let index = 0; index < buttonArray.length; index++) {
+    buttonArray[index].addEventListener('mousedown', function () {
+      soundArray[index].play();
+      console.log(`clicked`);
+    });
+    buttonArray[index].addEventListener('mouseup', function () {
+      soundArray[index].pause();
+      soundArray[index].load();
+    })
+  }
 }
 
 function addColor() {
-    for (button of buttonArray) {
-        button.addEventListener('mousedown', function (event) {
-            event.target.style.backgroundColor = 'red';
-        })
-        button.addEventListener('mouseup', function (event) {
-            event.target.style.backgroundColor = 'rgb(161, 161, 161)';
-        })
-    }
+  for (button of buttonArray) {
+    button.addEventListener('mousedown', function (event) {
+      event.target.style.backgroundColor = 'red';
+    })
+    button.addEventListener('mouseup', function (event) {
+      event.target.style.backgroundColor = 'rgb(161, 161, 161)';
+    })
+  }
 }
 
 addClicks();
